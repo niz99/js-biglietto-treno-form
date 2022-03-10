@@ -13,20 +13,20 @@ bottoneGenera.addEventListener("click",
 
         let numeroCP = Math.floor(Math.random() * 9999) + 90000;
 
-        let prezzo = (km * 0.21);
+        let prezzo = (km * 0.21).toFixed(2);
 
         if( eta == "minorenne"){
             let sconto20 = (prezzo / 100) * 20;
             prezzo = (prezzo - sconto20).toFixed(2);
-            let biglietto = 'Biglietto Ridotto';
+            var biglietto = 'Biglietto Ridotto';
 
         } else if ( eta == "over"){
             let sconto40 = (prezzo / 100) * 40; 
             prezzo = (prezzo - sconto40).toFixed(2);
-            let biglietto = 'Biglietto Silver';
+            var biglietto = 'Biglietto Silver';
 
         } else {
-            let biglietto = 'Biglietto Standard';
+            var biglietto = 'Biglietto Standard';
         }
 
         document.getElementById('nome-utente').innerHTML = nome;
