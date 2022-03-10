@@ -1,56 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./asset/css/style.css">
-    <title>Biglietto treno - form</title>
+    <title>Biglietto del treno</title>
 </head>
-
 <body>
-
-    <h1>calcola il prezzo del tuo biglietto</h1>
-
-    <div class="container">
-
-        <div class="int-container">
-            <div>
-                <h4>Nome e cognome</h4>
-                <input type="text">
-            </div>
-            <div class="input-center">
-                <h4>Km da percorrere</h4>
-                <input type="number">
-            </div>
-            <div>
-                <h4>Fascia d'età</h4>
-                <select>
-                    <option value="u18">Under 18</option>
-                    <option value="maggiorenne">Maggiorenne</option>
-                    <option value="o65">Over 65</option>
-                </select>
-            </div>
+    
+    <h2>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+    <div class="dati-biglietto">
+        <div class="dato1">
+            <label for="nome">Nome e cognome</label> <br>
+            <input type="text" placeholder="Inserisci il tuo nome"  id="nome">
+        </div>
+    
+        <div class="dato2">
+            <label for="km">Km da percorrere</label> <br>
+            <input type="number" placeholder="Inserisci i km" id="km">
+        </div>
+            
+        <div class="dato3">
+            <label for="età">Fascia di età</label> <br>
+            <select name="età" id="eta">
+                <option value="minorenne">Minorenne</option>
+                <option value="maggiorenne">Maggiorenne</option>
+                <option value="over">Over 65</option>
+            </select>
         </div>
 
-        <div class="int-container">
-            <button type="button">Genera</button>
-            <button type="button">Annulla</button>
+        <div class="bottoni">
+            <button id="bottoneGenera">Genera</button>
+            <button id="bottoneAnnulla">Annulla</button>
         </div>
-
     </div>
-
-
-
-
-
-
-
-
-
-
-    <script type="text/javascript" src="./asset/js/main.js"></script>
+   
+    <h2>IL TUO BIGLIETTO</h2>
+    <div class="biglietto" id="biglietto">
+        <h3>DETTAGLIO PASSEGGERI</h3>
+        <table>
+            <tr>
+              <th>NOME PASSEGGERO</th>
+              <th>Offerta</th>
+              <th>Carrozza</th>
+              <th>Codice CP</th>
+              <th>Costo biglietto</th>
+            </tr>
+            <tr>
+              <td id="nome-utente"></td>
+              <td id="offerta"></td>
+              <td id="carrozza"></td>
+              <td id="codice"></td>
+              <td id="costo"></td>
+            </tr>
+          </table>
+    </div>
+       
+    <script src="./asset/js/main.js"></script>
 </body>
-
 </html>
